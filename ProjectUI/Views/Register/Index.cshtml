@@ -1,0 +1,21 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LoginRegister.cshtml";
+}
+<div class="form-container">
+    <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
+    <h1 class="opacity">REGISTER</h1>
+    <form method="post">
+        <input type="text" placeholder="USERNAME" autocomplete="off" asp-for="NameSurname"/>
+        <input type="password" placeholder="PASSWORD" autocomplete="off" asp-for="Password"/>
+        <input type="password" placeholder="REPASSWORD" autocomplete="off" asp-for="RePassword"/>
+        <button class="opacity">SUBMIT</button>
+    </form>
+    <div class="register-forget opacity">
+        <a href="/Login/Index">LOGIN</a>
+    </div>
+</div>
+
+
+

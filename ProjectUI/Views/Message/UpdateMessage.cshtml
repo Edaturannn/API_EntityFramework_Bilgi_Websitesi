@@ -1,0 +1,19 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "UpdateMessage";
+    Layout = "~/Views/Shared/_AdminsLayout.cshtml";
+}
+
+<h1 style="text-align:center;">Update</h1>
+<form method="post">
+    <input type="hidden" asp-for="contactid"/>
+    
+
+    <label>Status</label>
+    <input type="text" asp-for="status" class="form-control" autocomplete="off" />
+    <br />
+    <button class="btn btn-info">Update</button>
+</form>
+
+
+

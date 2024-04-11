@@ -1,0 +1,28 @@
+﻿@model Vision
+@{
+    ViewData["Title"] = "CreateVision";
+    Layout = "~/Views/Shared/_AdminsLayout.cshtml";
+}
+
+<h1 style="text-align:center;">New Add</h1>
+<form method="post">
+    <label>Title</label>
+    <input type="text" asp-for="title" class="form-control" autocomplete="off" />
+
+    <br />
+
+   
+
+    <label>İcon</label>
+    <input type="text" asp-for="icon" class="form-control" autocomplete="off" />
+
+    <br />
+
+    <label>Text</label>
+    <textarea type="text" asp-for="text" class="form-control" autocomplete="off" rows="5"></textarea>
+
+    <br />
+    <button class="btn btn-info">Create</button>
+</form>
+
+

@@ -1,0 +1,30 @@
+﻿@model AllUsers
+@{
+    ViewData["Title"] = "UpdateAllUsers";
+    Layout = "~/Views/Shared/_AdminsLayout.cshtml";
+}
+
+<h1 style="text-align:center;">Update</h1>
+<form method="post">
+    <input type="hidden" asp-for="allusersid"/>
+    <label>Name Surname</label>
+    <input type="text" asp-for="namesurname" class="form-control" autocomplete="off" />
+
+    <br />
+
+    <label>Password</label>
+    <input type="text" asp-for="password" class="form-control" autocomplete="off" />
+
+    <br />
+
+    <label>Role</label>
+    <input type="text" asp-for="role" class="form-control" autocomplete="off" />
+
+    <br />
+    <button class="btn btn-info">Update</button>
+</form>
+
+
+
+
+

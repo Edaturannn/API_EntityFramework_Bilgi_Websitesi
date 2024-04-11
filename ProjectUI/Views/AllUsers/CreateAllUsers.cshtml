@@ -1,0 +1,27 @@
+﻿@model AllUsers
+@{
+    ViewData["Title"] = "CreateAllUsers";
+    Layout = "~/Views/Shared/_AdminsLayout.cshtml";
+}
+
+<h1 style="text-align:center;">New Add</h1>
+<form method="post">
+    <label>Name Surname</label>
+    <input type="text" asp-for="namesurname" class="form-control" autocomplete="off" />
+
+    <br />
+
+    <label>Password</label>
+    <input type="password" asp-for="password" class="form-control" autocomplete="off" />
+
+    <br />
+    <label>Rol</label>
+    <input type="text" asp-for="role" class="form-control" autocomplete="off" />
+
+    <br />
+    <br />
+    <button class="btn btn-info">Create</button>
+</form>
+
+
+

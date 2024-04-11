@@ -1,0 +1,36 @@
+﻿@model List<About>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminsLayout.cshtml";
+    int count = 0;
+}
+
+<div>
+    <h1 style="text-align:center;">About Us</h1>
+
+    <table class="table table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Text</th>
+            <th>Imges</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.text</td>
+                <td><img src="@item.img" style="height:100px; width:100px;" /></td>
+                <td><a href="/About/UpdateAbout/@item.aboutid" class="btn btn-outline-warning">Update</a></td>
+                <td><a href="/About/DeleteAbout/@item.aboutid" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/About/CreateAbout" class="btn btn-outline-info">Add</a>
+</div>
+
+

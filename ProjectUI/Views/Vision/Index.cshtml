@@ -1,0 +1,43 @@
+﻿@model List<Vision>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminsLayout.cshtml";
+    int count = 0;
+}
+
+<div>
+    <h1 style="text-align:center;">Vision</h1>
+
+    <table class="table table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Text</th>
+            <th>İcon</th>
+
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.title</td>
+                <td>@item.text</td>
+                <td>@item.icon</td>
+                <td><a href="/Vision/UpdateVision/@item.visionid" class="btn btn-outline-warning">Update</a></td>
+                <td><a href="/Vision/DeleteVision/@item.visionid" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/Vision/CreateVision" class="btn btn-outline-info">Add</a>
+</div>
+
+
+
+
+
+

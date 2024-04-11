@@ -1,0 +1,22 @@
+﻿@model Galery
+@{
+    ViewData["Title"] = "CreateGalery";
+    Layout = "~/Views/Shared/_AdminsLayout.cshtml";
+}
+
+<h1 style="text-align:center;">New Add</h1>
+<form method="post">
+    <label>Title</label>
+    <input type="text" asp-for="title" class="form-control" autocomplete="off" />
+
+    <br />
+
+    <label>Images</label>
+    <input type="text" asp-for="img" class="form-control" autocomplete="off" />
+
+    <br />
+    <button class="btn btn-info">Create</button>
+</form>
+
+
+

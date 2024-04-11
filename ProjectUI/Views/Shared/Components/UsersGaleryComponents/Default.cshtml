@@ -1,0 +1,33 @@
+﻿@model List<Galery>
+ <!-- ======= Portfolio Section ======= -->
+<section id="galery" class="portfolio section-bg">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Galery</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="portfolio-wrap">
+                        <img src="@item.img" class="img-fluid" alt="" style="width:500px; height:300px;">
+                        <div class="portfolio-links">
+                            <a href="@item.img" data-gallery="portfolioGallery" class="portfolio-lightbox" title="@item.title"><i class="bx bx-plus"></i></a>
+                            <a href="#" title=""><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section><!-- End Portfolio Section -->

@@ -1,0 +1,45 @@
+﻿@model List<AllUsers>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminsLayout.cshtml";
+    int count = 0;
+}
+<div>
+    <h1 style="text-align:center;">All Users</h1>
+
+    <table class="table table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Name Surname</th>
+            <th>Password</th>
+            <th>Create Date</th>
+            <th>Locked</th>
+            <th>Role</th>
+
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.namesurname</td>
+                <td>@item.password</td>
+                <td>@item.createdate</td>
+                <td>@item.locked</td>
+                <td>@item.role</td>
+                <td><a href="/AllUsers/UpdateAllUsers/@item.allusersid" class="btn btn-outline-warning">Update</a></td>
+                <td><a href="/AllUsers/DeleteAllUsers/@item.allusersid" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/AllUsers/CreateAllUsers" class="btn btn-outline-info">Add</a>
+</div>
+
+
+
+
+

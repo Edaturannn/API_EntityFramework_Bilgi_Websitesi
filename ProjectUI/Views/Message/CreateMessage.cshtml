@@ -1,0 +1,30 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "CreateMessage";
+    Layout = "~/Views/Shared/_AdminsLayout.cshtml";
+}
+
+<h1 style="text-align:center;">New Add</h1>
+<form method="post">
+    <label>Name</label>
+    <input type="text" asp-for="yourname" class="form-control" autocomplete="off" />
+
+    <br />
+
+    <label>E-Mail</label>
+    <input type="text" asp-for="youremail" class="form-control" autocomplete="off" />
+
+    <br />
+
+    <label>Subject</label>
+    <input type="text" asp-for="subject" class="form-control" autocomplete="off" />
+
+    <br />
+
+    <label>Message</label>
+    <textarea class="form-control" rows="5" required asp-for="message" autocomplete="off"></textarea>
+
+    <br />
+    <button class="btn btn-info">Create</button>
+</form>
+

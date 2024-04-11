@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Users Page</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    @*Css kodları*@
+        @await Component.InvokeAsync("UsersCssComponents")
+    @*Css kodları*@
+</head>
+<body>
+    @*Menu kodları*@
+        @await Component.InvokeAsync("UsersNavbarComponents")
+    @*Menu kodları*@
+
+    @*İcerik kodları*@
+        @await Component.InvokeAsync("UsersHomeComponents")
+        @await Component.InvokeAsync("UsersAboutUsComponents")
+        @await Component.InvokeAsync("UsersCategoryComponents")
+        @await Component.InvokeAsync("UsersVisionComponents")
+        @await Component.InvokeAsync("UsersGaleryComponents")
+    @*İcerik kodları*@
+
+    @* contact kodları *@
+        @RenderBody()
+    @* contact kodları *@
+
+    @* footer kodları *@
+        @await Component.InvokeAsync("UsersFooterComponents")
+    @* footer kodları *@
+
+    @*JS kodları*@
+        @await Component.InvokeAsync("UsersJsComponents")
+    @*JS kodları*@
+</body>
+</html>
+
+
+
